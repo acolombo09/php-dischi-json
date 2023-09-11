@@ -44,8 +44,9 @@ session_start();
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <!-- AXIOS CDN -->
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  
   <!-- My css link -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="./style.css">
   <title>PHP | JSON Disks</title>
 </head>
 <body>
@@ -53,21 +54,20 @@ session_start();
     <div class="container-fluid py-4 bg-dark bg-opacity-90 shadow-lg">
       <div class="row justify-content-center">
         <div class="col-12 d-flex flex-column mx-auto">
-          <div class="col d-flex flex-column justify-content-start mb-2">
+          <div class="col d-flex flex-column justify-content-start mb-2 ms-3">
             <img src="./imgs/vuejs-logo.png" alt="" width="60" height="45">
           </div>
-          <div class="row row-cols-3 bg-success bg-opacity-50 g-5 mt-2 pb-5">
+          <div class="row row-cols-3 bg-success bg-opacity-50 g-5 mt-3 pb-5">
             
-            <div class="col d-flex flex-column justify-content-center align-items-center text-center">
-              <div class="card bg-dark bg-opacity-25" style="height: 420px; width: 351px;"
-                v-for="post in posts">
-                <div class="card-img-top border py-4 d-flex flex-column justify-content-center align-items-center">
-                  <img src="./imgs/vuejs-logo.png" class="border" alt="card-img-top" style="width: 250px; height: 250px;">
+            <div class="col d-flex flex-column justify-content-center align-items-center text-center" v-for="post in posts">
+              <div class="card bg-dark bg-opacity-25" style="height: 420px; width: 351px;">
+                <div class="card-img-top py-4 d-flex flex-column justify-content-center align-items-center">
+                  <img :src="post.poster" alt="-" style="width: 250px; height: 250px;">
                 </div>
-                <div class="card-body border">
-                  <h5 class="card-title border">{{post.title}}</h5>
-                  <h6 class="card-text border">{{post.author}}</h6>
-                  <h5 class="card-text border"><small>{{post.year}}</small></h5>
+                <div class="card-body">
+                  <h5 class="card-title text-white">{{ post.title }}</h5>
+                  <h6 class="card-text text-light fw-light">{{ post.author }}</h6>
+                  <h5 class="card-text text-white"><small>{{ post.year }}</small></h5>
                 </div>
               </div>
             </div>
@@ -79,7 +79,7 @@ session_start();
   </div> 
 
   <!-- My JS file -->
-  <script src="js/main.js"></script>
+  <script src="./main.js"></script>
   <!-- Bootstrap JS file -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   
