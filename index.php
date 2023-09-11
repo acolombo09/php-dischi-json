@@ -49,82 +49,34 @@ session_start();
   <title>PHP | JSON Disks</title>
 </head>
 <body>
-  <div class="container-fluid py-4 bg-dark bg-opacity-75 shadow-lg">
-    <div class="row justify-content-center">
-      <div class="col-12 d-flex flex-column mx-auto">
-        <div class="col d-flex flex-column justify-content-start mb-2">
-          <img src="./imgs/vuejs-logo.png" alt="" width="60" height="45">
-        </div>
-        <div class="row row-cols-3 bg-success bg-opacity-50 g-5 mt-2 pb-5">
-          <div class="col d-flex flex-column justify-content-center align-items-center text-center">
-            <div class="card bg-dark bg-opacity-25">
-              <img src="./imgs/vuejs-logo.png" class="card-img-top border" alt="card-img-top">
-              <div class="card-body border">
-                <h5 class="card-title border">Card title</h5>
-                <h6 class="card-text border">Author</h6>
-                <h5 class="card-text border"><small>Year</small></h5>
-              </div>
-            </div>
+  <div id="app">
+    <div class="container-fluid py-4 bg-dark bg-opacity-90 shadow-lg">
+      <div class="row justify-content-center">
+        <div class="col-12 d-flex flex-column mx-auto">
+          <div class="col d-flex flex-column justify-content-start mb-2">
+            <img src="./imgs/vuejs-logo.png" alt="" width="60" height="45">
           </div>
-
-          <div class="col d-flex flex-column justify-content-center align-items-center text-center">
-            <div class="card bg-dark bg-opacity-25">
-              <img src="./imgs/vuejs-logo.png" class="card-img-top border" alt="card-img-top">
-              <div class="card-body border">
-                <h5 class="card-title border">Card title</h5>
-                <h6 class="card-text border">Author</h6>
-                <h5 class="card-text border"><small>Year</small></h5>
+          <div class="row row-cols-3 bg-success bg-opacity-50 g-5 mt-2 pb-5">
+            
+            <div class="col d-flex flex-column justify-content-center align-items-center text-center">
+              <div class="card bg-dark bg-opacity-25" style="height: 420px; width: 351px;"
+                v-for="post in posts">
+                <div class="card-img-top border py-4 d-flex flex-column justify-content-center align-items-center">
+                  <img src="./imgs/vuejs-logo.png" class="border" alt="card-img-top" style="width: 250px; height: 250px;">
+                </div>
+                <div class="card-body border">
+                  <h5 class="card-title border">{{post.title}}</h5>
+                  <h6 class="card-text border">{{post.author}}</h6>
+                  <h5 class="card-text border"><small>{{post.year}}</small></h5>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="col d-flex flex-column justify-content-center align-items-center text-center">
-            <div class="card bg-dark bg-opacity-25">
-              <img src="./imgs/vuejs-logo.png" class="card-img-top border" alt="card-img-top">
-              <div class="card-body border">
-                <h5 class="card-title border">Card title</h5>
-                <h6 class="card-text border">Author</h6>
-                <h5 class="card-text border"><small>Year</small></h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col d-flex flex-column justify-content-center align-items-center text-center">
-            <div class="card bg-dark bg-opacity-25">
-              <img src="./imgs/vuejs-logo.png" class="card-img-top border" alt="card-img-top">
-              <div class="card-body border">
-                <h5 class="card-title border">Card title</h5>
-                <h6 class="card-text border">Author</h6>
-                <h5 class="card-text border"><small>Year</small></h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col d-flex flex-column justify-content-center align-items-center text-center">
-            <div class="card bg-dark bg-opacity-25">
-              <img src="./imgs/vuejs-logo.png" class="card-img-top border" alt="card-img-top">
-              <div class="card-body border">
-                <h5 class="card-title border">Card title</h5>
-                <h6 class="card-text border">Author</h6>
-                <h5 class="card-text border"><small>Year</small></h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col d-flex flex-column justify-content-center align-items-center text-center">
-            <div class="card bg-dark bg-opacity-25">
-              <img src="./imgs/vuejs-logo.png" class="card-img-top border" alt="card-img-top">
-              <div class="card-body border">
-                <h5 class="card-title border">Card title</h5>
-                <h6 class="card-text border">Author</h6>
-                <h5 class="card-text border"><small>Year</small></h5>
-              </div>
-            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </div> 
 
   <!-- My JS file -->
   <script src="js/main.js"></script>
