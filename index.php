@@ -55,7 +55,9 @@ session_start();
       <div class="row justify-content-center">
         <div class="col-12 d-flex flex-column mx-auto">
           <div class="col d-flex flex-column justify-content-start mb-2 ms-3">
-            <img src="./imgs/vuejs-logo.png" alt="" width="60" height="45">
+            <a href="#">
+              <img src="./imgs/vuejs-logo.png" alt="" width="60" height="45">
+            </a>
           </div>
           <div class="row row-cols-3 bg-success bg-opacity-50 g-5 mt-3 pb-5">
             
